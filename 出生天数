@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main()
+{
+int year,month,day,days,day1;
+printf("%d-%d-%d",year,month,day);
+scanf("%d-%d-%d",&year,&month,&day);
+if(year/4==0&&year/100!=0||year/400==0)
+   day1=29;
+  else
+    day1=28;
+switch(month-1)
+  {
+    case 11: days+=30;
+    case 10: days+=31;
+    case 9:  days+=30;
+    case 8:  days+=31;
+    case 7:  days+=31;
+    case 6:  days+=30;
+    case 5:  days+=31;
+    case 4:  days+=30;
+    case 3:  days+=31;
+    case 2:  days+=30；
+    case 1:  days+=31;
+    defult:  days+=day;
+    }
+  printf("你生日是%d年第%d天",year,days);  
+}
