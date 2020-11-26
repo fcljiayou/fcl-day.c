@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main()
+{
+	int y,x,i;
+	printf("输入x\n",x);
+	scanf("%d",&x);
+	for(i;i<=99;i++)
+	{
+		if(x<0)
+		  y=2*x+i;
+		else 
+		 y=x*x-i;
+		i=i++;  		
+	}
+	printf("%d",y);
+}
