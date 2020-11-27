@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main()
+{
+int n,score,i;
+printf("输入学生数量\n",n);
+scanf("%d",&n);
+for(i=1;i<=n;i++)
+  {
+   printf("请输入第%d名学生的成绩:\n",i,score);
+   scanf("%d%d",&i,&score);
+    if(score>=0&&score<=100)
+    {
+    if(score>=60)
+       {
+        if(score>=90) printf("A\n",score);
+        else 
+        if(score>=70) printf("B\n",score);
+        else printf("C\n",score);
+        }
+        else printf("D\n",score);
+        i=i++;
+    }
+   else printf("成绩错误，重新输入"); 
+  }
+
+}
