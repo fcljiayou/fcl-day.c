@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	int x,n,i;
+	double y=0.0;
+	scanf("%d%d",&x,&n);
+	for(i=1;i<=n;i++)
+	y+=pow(x,y)/i;
+	printf("%lf\n",y);
+}
