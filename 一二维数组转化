@@ -1,0 +1,35 @@
+#include <stdio.h>
+void main()
+{  
+   int a[4][5];
+   int b[20];
+   int i,j,n,k=0,t=0;
+/*二维转一维*/
+     for(i=0;i<4;i++)  
+      for(j=0;j<5;j++)
+       scanf("%d",&a[i][j]);
+    for(i=0;i<4;i++)
+      for(j=0;j<5;j++)
+       {b[k]=a[i][j];
+         k++;  }
+     printf("一维数组\n");
+     for(i=0;i<20;i++)    
+      printf("%3d",b[i]);
+      printf("\n");
+/*冒泡排序从大到小*/
+    printf("\n一维数组排序\n");
+    for(n=0;n<19;n++)
+       for(i=0;i<19-n;i++)
+          if(b[i]>b[i+1])
+           {t=b[i];b[i]=b[i+1];b[i+1]=t;}
+           for(j=0;j<20;j++)
+           printf("%3d",b[j]);
+/*一维转二维*/
+    printf("\n新二维数组\n");
+    for(i=0;i<4;i++)
+      {for(j=0;j<5;j++)
+        printf("%d  ",a[i][j]);
+        if(j>=5)
+        printf("\n");}
+
+}
